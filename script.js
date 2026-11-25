@@ -1259,7 +1259,7 @@ async function loginAdmin(){
 
 
   let calculada;
-  try{calculada=await derivarSenha(senha,"589db067e22bfae0a9b9f7ca778deb2d");}catch{toast("Abra o site em HTTPS para entrar.");return;}
+  try{calculada=await derivarSenha(senha,"admin12345");}catch{toast("Abra o site em HTTPS para entrar.");return;}
   if(tentativa!==sessaoAdmin)return;
   porId("senhaAdmin").value="";
   if(calculada!=="aaf4c4b94229918edfc9e32f786822ad5ef209c838792343d73b6d15512411d5"){
