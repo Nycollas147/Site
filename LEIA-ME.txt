@@ -1,0 +1,16 @@
+SAFEWAY — atualização de itinerários, 25/11/2026
+
+O GTFS da linha 122 (ARTESP 09/11/2026) continua incluído. Para as 14 municipais, foram cadastrados links específicos de ida e volta do catálogo Cittamobi. A linha municipal 036 agora possui geometria de ida e volta em KML (Viação Osasco). O catálogo é indicado pela CMTO: https://cmto.com.br/itinerario.php
+
+Para incorporar geometrias reais: selecione a linha, expanda Dados do itinerário (GTFS), importe o ZIP fornecido pela operadora. Confira os dois sentidos. Os dados importados ficam no navegador quando houver espaço. Exporte itinerarios-importados.json e substitua o arquivo de mesmo nome na pasta dados; publique novamente o projeto completo no Netlify para compartilhar os itinerários. Não publique arquivos sem autorização/licença de reutilização.
+
+GTFS metropolitano: https://dadosabertos.artesp.sp.gov.br/dataset/gtfs
+GTFS municipal: solicite à CMTO (cmto@osasco.sp.gov.br) ou operadora.
+
+Nenhum rastreamento simulado foi adicionado. A estimativa viária da 020 permanece opcional e explicitamente identificada.
+
+Linha 036: 589 vértices na ida e 534 na volta, preservados na ordem original. Fonte: https://viacaoosasco.com.br/horarios/consulta/?numlinham=028 . O arquivo não contém paradas ou localização em tempo real. Confirme a autorização de redistribuição do KML antes de publicar o pacote em servidor público; não foi encontrada licença explícita.
+
+ATUALIZAÇÃO GTFS ARTESP — 25/11/2026
+Base de origem: artesp_gtfs.zip, versão 20261109, validade indicada 01/01/2026 a 31/12/2026. Portal: https://dadosabertos.artesp.sp.gov.br/dataset/gtfs
+Recorte: 63 códigos de linhas/variantes com Osasco no nome de origem ou destino; 64 cadastros (462 possui duas geometrias por sentido, representadas separadamente, sem afirmar que uma é a principal). São 123 geometrias ordenadas pelo campo shape_pt_sequence. As paradas vêm de uma viagem representativa de cada shape; os horários são partidas distintas programadas no GTFS, agrupadas por serviço WD, SAT e SUN. Não há previsão em tempo real. Não foi inferida operação nos feriados. A 850EX1 não possui viagens na base; 085VP1, 517 e 581 só possuem geometria em um sentido. A 581 não tem paradas/horários recuperáveis no recorte. As tarifas são as do fare_attributes.txt associado por fare_rules.txt. A base tem ARTESP como agência; operadores não são informados individualmente. O catálogo municipal anterior, o KML da 036 e as funcionalidades do site foram preservados. As geometrias intermunicipais são estáticas e não dependem de baixar o ZIP original no navegador. A auditoria por sentido está em dados/ARTESP-auditoria.csv.
